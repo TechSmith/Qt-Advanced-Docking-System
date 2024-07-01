@@ -353,6 +353,7 @@ bool CAutoHideTab::event(QEvent* event)
 	{
 	case QEvent::Enter:
 	case QEvent::Leave:
+   case QEvent::DeferredDelete:
 		 d->forwardEventToDockContainer(event);
 		 break;
 

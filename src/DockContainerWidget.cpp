@@ -2236,6 +2236,7 @@ void CDockContainerWidget::handleAutoHideWidgetEvent(QEvent* e, QWidget* w)
 			 break;
 
 		case QEvent::MouseButtonPress:
+		case QEvent::DeferredDelete:
 			 d->DelayedAutoHideTimer.stop();
 			 break;
 
