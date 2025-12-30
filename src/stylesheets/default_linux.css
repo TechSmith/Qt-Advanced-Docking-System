@@ -39,6 +39,12 @@ ads--CTitleBarButton {
 }
 
 
+#autoHideTitleLabel {
+	padding-left: 4px;
+	color: palette(foreground);
+}
+
+
 #tabsMenuButton {
         qproperty-icon: url(:/ads/images/tabs-menu-button.svg);
         qproperty-iconSize: 16px;
@@ -84,6 +90,12 @@ ads--CDockWidgetTab QLabel {
 
 
 ads--CDockWidgetTab[activeTab="true"] QLabel {
+	color: palette(foreground);
+}
+
+
+#autoHideTitleLabel {
+	padding-left: 4px;
 	color: palette(foreground);
 }
 
@@ -314,7 +326,7 @@ ads--CAutoHideDockContainer ads--CDockAreaWidget[focused="true"] ads--CDockAreaT
 }
 
 
-#autoHideTitleLabel {
+ads--CAutoHideDockContainer #autoHideTitleLabel {
         padding-left: 4px;
         color: palette(light);
 }
@@ -324,13 +336,20 @@ ads--CAutoHideDockContainer ads--CDockAreaWidget[focused="true"] ads--CDockAreaT
  * CAutoHideDockContainer titlebar buttons
  *****************************************************************************/
 #dockAreaAutoHideButton {
-        qproperty-icon: url(:/ads/images/vs-pin-button.svg);
-        qproperty-iconSize: 16px;
+	qproperty-icon: url(:/ads/images/vs-pin-button.svg),
+		url(:/ads/images/vs-pin-button-disabled.svg) disabled;
+	qproperty-iconSize: 16px;
 }
 
 ads--CAutoHideDockContainer #dockAreaAutoHideButton {
         qproperty-icon: url(:/ads/images/vs-pin-button-pinned-focused.svg);
         qproperty-iconSize: 16px;
+}
+
+
+ads--CAutoHideDockContainer #dockAreaMinimizeButton {
+	qproperty-icon: url(:/ads/images/minimize-button-focused.svg);
+	qproperty-iconSize: 16px;	
 }
 
 
